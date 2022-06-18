@@ -80,9 +80,9 @@ For that, Flask gives us [Jinja templates](https://jinja.palletsprojects.com/en/
 - Click on 'create a launch.json file'. On the emergent selection window, choose Flask
 - Now you can use the > button on the top left column to start the Flask app in debug mode. If you place breakpoints in the code, the execution will pause and you can go step by step / check variable values, etc.
 
-![](https://drive.google.com/file/d/192Q6JQ4cTxsXeYDoN1a-1RpSTYAe6sl_/view?usp=sharing)
-![](https://drive.google.com/file/d/1xKno6Imm7hKi1NJchgmnxtBuL5lQ4opz/view?usp=sharing)
-![](https://drive.google.com/file/d/1bg3m__pB3IxKn7iooSvQPYWp15OiinRy/view?usp=sharing)
+![Screen1](https://lh4.googleusercontent.com/t0FP_JIIe-sgNDjwqdwBamxUGph-8SDCBppjTKfeT3VeLSR9F7n4rLCCDZ9xxzW1pxY=w600)
+![Screen2](https://lh6.googleusercontent.com/lLIKaET-UXwSuo130XFThgP3aVJvY4-SUZz0EpEgskbO_4_ae9B7OSjWiUCquOFQ9UY=w600)
+![Screen3](https://lh5.googleusercontent.com/HoNUe4uWvPD27cIvNUjA1Qx7l80xWLpwqTZZzKtyjDmrsE8T8-uLEKCamryQ1XbRH8g=w600)
 
 ### Step 5: A Form example
 
