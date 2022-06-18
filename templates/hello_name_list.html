@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1>Hello from Python Flask to:</h1>
+<ul>
+{% for name in personNamesList -%}
+    <li>{{ name }}!</li>
+{%- endfor %}
+</ul>
+{% endblock %}

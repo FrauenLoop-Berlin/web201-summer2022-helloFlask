@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+<form method="POST" action="">
+    {{ form.csrf_token }}
+    {% for field, errors in form.errors.items() %}
+    <div class="alert alert-error">
+        {{ form[field].label }}: {{ ', '.join(errors) }}
+    </div>
+    {% endfor %}
+    <div class="form-group">
+        {{ form.userName.label(class="form-control-label") }}
+        {% if form.userName.errors %}
+            {{ form.userName(class="form-control form-control-lg is-invalid") }}
+            <div class="invalid-feedback">
+                {% for error in form.userName.errors %}
+                    <span>{{ error }}</span>
+                {% endfor %}
+            </div>
+        {% else %}
+            {{ form.userName(class="form-control form-control-lg") }}
+        {% endif %}
+    </div>
+    <div class="form-group">
+        {{ form.submit(class="btn btn-outline-info") }}
+    </div>    
+</form>
+{% endblock %}
