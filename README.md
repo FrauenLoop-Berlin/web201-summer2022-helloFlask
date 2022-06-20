@@ -22,14 +22,13 @@ python3 -m venv venv
 pip3 install flask
 python web.py
 ```
-export PYTHONPATH="$PYTHONPATH:/home/mduhagon/flask-practice"
 
 
 ### Step 1: Convert initial web.py into a bit more complete app.py file / use flask run
 
 - By convention, Flask expects your app creation to happen in a file named app.py or wsgi.py. 
 You can name it as you wish (we created our app in web.py for example) but that requires us to pass an extra param
-if we want to use the `flask run` commandm which is the standard way to run flask applications 
+if we want to use the `flask run` command which is the standard way to run flask applications 
 (we saw python app-file.py also works, but it is not so standard).
 
 - Also, we are going to tweak a little bit the structure of the app.py to 
@@ -66,10 +65,12 @@ We just need to put the files in a folder named `static`:
 
 ### Step 3: Separating code from presentation / putting HTML inside templates    
 
-- It's clear that full html files are super complex and we cannot just construct them s strings within our route handling methods. We need to separate all this HTML / Presentation code into some other layer.
+- It's clear that full html files are super complex and we cannot just construct them as strings within our route-handling methods. 
+We need to separate all this HTML / Presentation code into some other layer.
 For that, Flask gives us [Jinja templates](https://jinja.palletsprojects.com/en/3.1.x/templates/)! Jinja is a templating engine used not only by Flask but many others. 
 
-- We create templates in the `templates` folder. A layout is like a parent template with common / repeatable content, that has 'holes' or blocks, that each specific page can define content for. We created one `layout.html` and a couple templates that extend it (hello.html / hello_name.html)
+- We create templates in the `templates` folder. In class we created a single template file called hello.tml 
+- Something we did not use in class but is very helpful (and it is used in this sample repo): **layouts**. A layout is like a parent template with common / repeatable content, that has 'holes' or blocks, that each specific page can define content for. In this sample I created one `layout.html` and a couple templates that extend it (hello.html / hello_name.html)
 
 - Templates can receive parameters, can have loops, conditional logic, etc. We try some of this in `hello_name.html`and `hello_name_list.html`
 
@@ -86,7 +87,7 @@ For that, Flask gives us [Jinja templates](https://jinja.palletsprojects.com/en/
 
 ### Step 5: A Form example
 
-- Forms are very important when dealing with dat input from the user. We can use some extra library calle WTForms to implement a lot of common tasks with forms (validation, showing errors for the form / individual fields on the template, etc.)
+- Forms are very important when dealing with data input from the user. We can use some extra library called [WTForms](https://wtforms.readthedocs.io/en/3.0.x/) to implement a lot of common tasks with forms (validation, showing errors for the form / individual fields on the template, etc.)
 
 - We install flask_wtf (which in turn also installs wtforms):
 
